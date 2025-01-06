@@ -11,3 +11,12 @@ urlpatterns = [
     path('create-sale-order/', create_sale_order, name='create_sale_order'),  
     path('sales-orders/', list_sales_orders, name='list_sales_orders'),  
 ]
+# inventory_management/urls.py  
+
+from django.contrib import admin  
+from django.urls import path, include  
+
+urlpatterns = [  
+    path('admin/', admin.site.urls),  
+    path('inventory/', include('inventory.urls')),  
+]
